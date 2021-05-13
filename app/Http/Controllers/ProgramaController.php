@@ -64,7 +64,7 @@ class ProgramaController extends Controller
             'precio' => 'required'
              ]);
 
-             if ($request->file('imagen_url') or $request->file('imagesitinerario') or $request->file('imagesincluye') or $request->file('imagesdbuffete') or $request->file('imagesabuffete') or $request->file('imagesh') or $request->file('imagesh2') or $request->file('imagesh3') ) {
+             if ($request->file('imagen_url') and $request->file('imagesitinerario') and $request->file('imagesincluye') ) {
 
                 // obtenemos el file archivo
 
@@ -178,6 +178,39 @@ class ProgramaController extends Controller
 
                     }
 
+                 if($request->file('imagesdbuffete') or $request->file('imagesdbuffete'))
+                 {
+                      // imagenes desayuno buffete
+                      foreach($request->file('imagesdbuffete') as $imag)
+                      {
+                          $imageName=$imag->getClientOriginalName();
+                          $imag->move(public_path().'/images/', $imageName);
+                          $cuts = Image::make((public_path('/images/'.$imageName)))->fit(355, 550);
+                          $cuts->save();
+                          $fileNames3[] = $imageName;
+                       }
+                       $images3 = json_encode($fileNames3);
+
+                       // imagenes almuerzo buffete
+                       foreach($request->file('imagesabuffete') as $imag)
+                       {
+                           $imageName=$imag->getClientOriginalName();
+                           $imag->move(public_path().'/images/', $imageName);
+                           $cuts = Image::make((public_path('/images/'.$imageName)))->fit(355, 550);
+                           $cuts->save();
+                           $fileNames4[] = $imageName;
+
+                        }
+                        $images4 = json_encode($fileNames4);
+
+                 }
+                 else
+                 {
+                        $images3 ='0';
+                        $images4 ='1';
+                 }
+
+
                 // corta las fotos solo de la portada
                  $img = Image::make(public_path('storage/'.$path))->fit(850, 600);
                  $img->save();
@@ -188,8 +221,8 @@ class ProgramaController extends Controller
                      'itinerario'=> $datos['itinerario'],
                      'imagesitinerario' => $images,
                      'imagesincluye'=>$images2,
-                     'imagesdbuffete'=> " ",
-                     'imagesabuffete'=> " ",
+                     'imagesdbuffete'=> $images3,
+                     'imagesabuffete'=> $images4,
                      'imagesh'=> " ",
                      'imagesh2'=> " ",
                      'imagesh3'=> " ",

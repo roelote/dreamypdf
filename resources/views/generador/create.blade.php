@@ -25,11 +25,11 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">NOMBRE DEL TOUR</label>
-                <input type="text" class="form-control mb-2" id="titulo" name="titulo" placeholder="Nombre Tour">
+                <input type="text" class="form-control mb-2" id="titulo" name="titulo" placeholder="Nombre Tour" required>
               </div>
               <div class="form-group col-md-6">
                       <label for="imagen_url">IMAGEN PORTADA</label>
-                      <input type="file" class="form-control-file" name="imagen_url" id="imagen_url">
+                      <input type="file" class="form-control-file" name="imagen_url" id="imagen_url" required>
               </div>
             </div>
             <div class="form-row">
@@ -46,17 +46,18 @@
                 <div class="form-group col-md-6">
                     <label for="itinerario">FOTOS ITINERARIO <small class="text-danger font-weight-bold"> 4 FOTOS</small></label>
                     <div class="border p-2 bg-light">
-                                <input type="file" name="imagesitinerario[]" multiple class="form-control-file" accept="image/*">
+                                <input type="file" name="imagesitinerario[]" multiple class="form-control-file" accept="image/*" required>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="incluye">FOTO INCLUYE <small class="text-danger font-weight-bold"> 2 FOTOS</small></label>
                     <div class="border p-2 bg-light">
-                                <input type="file" name="imagesincluye[]" multiple class="form-control-file" accept="image/*">
+                                <input type="file" name="imagesincluye[]" multiple class="form-control-file" accept="image/*" required>
                     </div>
                 </div>
             </div>
-            {{--  <div class="form-row">
+
+            <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="itinerario" class="text-uppercase">Desayuno Buffete <small class="text-danger font-weight-bold"> 3 FOTOS</small></label>
                     <div class="border p-2 bg-light">
@@ -70,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-row">
+            {{--  <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="itinerario" class="text-uppercase">Hotel Basico <small class="text-danger font-weight-bold"> 6 FOTOS</small></label>
                     <div class="border p-2 bg-light">
