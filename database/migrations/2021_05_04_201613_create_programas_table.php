@@ -21,11 +21,11 @@ class CreateProgramasTable extends Migration
             $table->text('imagesitinerario');
             $table->text('incluye');
             $table->text('imagesincluye');
-            $table->text('imagesdbuffete');
-            $table->text('imagesabuffete');
-            $table->text('imagesh');
-            $table->text('imagesh2');
-            $table->text('imagesh3');
+            $table->text('imagesdbuffete')->nullable();
+            $table->text('imagesabuffete')->nullable();
+            $table->text('imagesh')->nullable();
+            $table->text('imagesh2')->nullable();
+            $table->text('imagesh3')->nullable();
             $table->text('precio');
             $table->timestamps();
         });

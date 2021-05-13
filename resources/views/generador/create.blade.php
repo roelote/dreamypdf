@@ -15,9 +15,9 @@
       </div>
     <div class="card-body">
 
-        @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                {{ session('status') }}
             </div>
         @endif
         <form method="POST" action="{{ route('programa.store') }}" enctype="multipart/form-data">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-row">
+            {{--  <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="itinerario" class="text-uppercase">Desayuno Buffete <small class="text-danger font-weight-bold"> 3 FOTOS</small></label>
                     <div class="border p-2 bg-light">
@@ -89,7 +89,7 @@
                     <input type="file" name="imagesh3[]" multiple class="form-control-file" accept="image/*">
                     </div>
                 </div>
-            </div>
+            </div>  --}}
             <div class="form-group">
                 <label for="precio">PRECIOS</label>
                 <textarea class="form-control mb-2" id="precio" name="precio" cols="30" rows="10"></textarea>
