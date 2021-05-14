@@ -208,7 +208,7 @@ class ProgramaController extends Controller
                     }
                     else
                     {
-                        $images5 ='["a-buffete-1.png","a-buffete-2.png","a-buffete-3.png"]';
+                        $images5 ='["hotel-1.png","hotel-2.png","hotel-3.png","hotel-4.png","hotel-5.png","hotel-6.png"]';
                     }
 
                     if($request->file('imagesh2'))
@@ -227,7 +227,7 @@ class ProgramaController extends Controller
                     }
                     else
                     {
-                        $images6 ='["a-buffete-1.png","a-buffete-2.png","a-buffete-3.png"]';
+                        $images6 ='["hotel2-1.png","hotel2-2.png","hotel2-3.png","hotel2-4.png","hotel2-5.png","hotel2-6.png"]';
                     }
 
                     if($request->file('imagesh3'))
@@ -246,7 +246,7 @@ class ProgramaController extends Controller
                     }
                     else
                     {
-                        $images7 ='["a-buffete-1.png","a-buffete-2.png","a-buffete-3.png"]';
+                        $images7 ='["hotel3-1.png","hotel3-2.png","hotel3-3.png","hotel3-4.png","hotel3-5.png","hotel3-6.png"]';
                     }
 
 
@@ -262,9 +262,9 @@ class ProgramaController extends Controller
                      'imagesincluye'=>$images2,
                      'imagesdbuffete'=> $images3,
                      'imagesabuffete'=> $images4,
-                     'imagesh'=> " ",
-                     'imagesh2'=> " ",
-                     'imagesh3'=> " ",
+                     'imagesh'=> $images5,
+                     'imagesh2'=> $images6,
+                     'imagesh3'=> $images7,
                      'incluye'=> $datos['incluye'],
                      'precio'=> $datos['precio']
                  ]);

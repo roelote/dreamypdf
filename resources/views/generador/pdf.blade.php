@@ -438,17 +438,19 @@ h3
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aliquam soluta deleniti voluptates adipisci vero magni illum at consectetur ipsum praesentium voluptas non dolore vel quaerat, dolores corporis quo similique.</p>
               <div>
                 <table class="table">
-
+                    @php
+                    $h1 = json_decode($id->imagesh);
+                    @endphp
                   <tbody>
                     <tr>
-                      <td style="width: 33%"><img src="img/b-1.jpg" alt="" style="width: 100%; height:260px;"></td>
-                      <td style="width: 33%"><img src="img/b-2.jpg" alt="" style="width: 100%; height:260px;"></td>
-                      <td style="width: 33%"><img src="img/b-3.jpg" alt="" style="width: 100%; height:260px;"></td>
+                      <td style="width: 33%"><img src="images/{{ $h1[0] }}" alt="" style="width: 100%; height:260px;"></td>
+                      <td style="width: 33%"><img src="images/{{ $h1[1] }}" alt="" style="width: 100%; height:260px;"></td>
+                      <td style="width: 33%"><img src="images/{{ $h1[2] }}" alt="" style="width: 100%; height:260px;"></td>
                     </tr>
                     <tr>
-                      <td style="width: 33%"><img src="img/b-4.jpg" alt="" style="width: 100%; height:260px;"></td>
-                      <td style="width: 33%"><img src="img/b-5.jpg" alt="" style="width: 100%; height:260px;"></td>
-                      <td style="width: 33%"><img src="img/b-5.jpg" alt="" style="width: 100%; height:260px;"></td>
+                      <td style="width: 33%"><img src="images/{{ $h1[3] }}" alt="" style="width: 100%; height:260px;"></td>
+                      <td style="width: 33%"><img src="images/{{ $h1[4] }}" alt="" style="width: 100%; height:260px;"></td>
+                      <td style="width: 33%"><img src="images/{{ $h1[5] }}" alt="" style="width: 100%; height:260px;"></td>
                     </tr>
 
                   </tbody>
@@ -475,17 +477,19 @@ h3
             </div>
             <div>
               <table class="table">
-
+                @php
+                $h2 = json_decode($id->imagesh2);
+                @endphp
                 <tbody>
                   <tr>
-                    <td style="width: 33%"><img src="img/2-1.jpg" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="img/2-2.jpg" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="img/2-3.jpg" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h2[0] }}" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h2[1] }}" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h2[2] }}" alt="" style="width: 100%; height:260px;"></td>
                   </tr>
                   <tr>
-                    <td style="width: 33%"><img src="img/2-4.jpg" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="img/2-5.jpg" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="img/2-6.jpg" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h2[3] }}" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h2[4] }}" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h2[5] }}" alt="" style="width: 100%; height:260px;"></td>
                   </tr>
 
                 </tbody>
@@ -509,17 +513,19 @@ h3
             </div>
             <div>
               <table class="table">
-
+                @php
+                $h3 = json_decode($id->imagesh3);
+                @endphp
                 <tbody>
                   <tr>
-                    <td style="width: 33%"><img src="img/3-1.jpg" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="img/3-2.jpg" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="img/3-3.jpg" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h3[0] }}" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h3[1] }}" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h3[2] }}" alt="" style="width: 100%; height:260px;"></td>
                   </tr>
                   <tr>
-                    <td style="width: 33%"><img src="img/3-4.jpg" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="img/3-5.jpg" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="img/3-6.jpg" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h3[3] }}" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h3[4] }}" alt="" style="width: 100%; height:260px;"></td>
+                    <td style="width: 33%"><img src="images/{{ $h3[5] }}" alt="" style="width: 100%; height:260px;"></td>
                   </tr>
 
                 </tbody>

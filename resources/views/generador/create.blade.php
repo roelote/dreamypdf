@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            {{--  <div class="form-row">
+            <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="itinerario" class="text-uppercase">Hotel Basico <small class="text-danger font-weight-bold"> 6 FOTOS</small></label>
                     <div class="border p-2 bg-light">
@@ -90,7 +90,7 @@
                     <input type="file" name="imagesh3[]" multiple class="form-control-file" accept="image/*">
                     </div>
                 </div>
-            </div>  --}}
+            </div>
             <div class="form-group">
                 <label for="precio">PRECIOS</label>
                 <textarea class="form-control mb-2" id="precio" name="precio" cols="30" rows="10"></textarea>
