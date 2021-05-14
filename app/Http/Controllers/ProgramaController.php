@@ -98,30 +98,6 @@ class ProgramaController extends Controller
                     }
                     $images2 = json_encode($fileNames2);
 
-                    //   // imagenes desayuno buffete
-                    //   foreach($request->file('imagesdbuffete') as $imag)
-                    //   {
-                    //       $imageName=$imag->getClientOriginalName();
-                    //       $imag->move(public_path().'/images/', $imageName);
-                    //       $cuts = Image::make((public_path('/images/'.$imageName)))->fit(355, 550);
-                    //       $cuts->save();
-                    //       $fileNames3[] = $imageName;
-
-                    //   }
-                    //   $images3 = json_encode($fileNames3);
-
-                    //    // imagenes almuerzo buffete
-                    //    foreach($request->file('imagesabuffete') as $imag)
-                    //    {
-                    //        $imageName=$imag->getClientOriginalName();
-                    //        $imag->move(public_path().'/images/', $imageName);
-                    //        $cuts = Image::make((public_path('/images/'.$imageName)))->fit(355, 550);
-                    //        $cuts->save();
-                    //        $fileNames4[] = $imageName;
-
-                    //    }
-                    //    $images4 = json_encode($fileNames4);
-
                     //    // imagenes hotel basico
                     //    foreach($request->file('imagesh') as $imag)
                     //    {
@@ -178,8 +154,8 @@ class ProgramaController extends Controller
 
                     }
 
-                 if($request->file('imagesdbuffete') or $request->file('imagesdbuffete'))
-                 {
+                 if( $request->file('imagesdbuffete'))
+                    {
                       // imagenes desayuno buffete
                       foreach($request->file('imagesdbuffete') as $imag)
                       {
@@ -190,8 +166,16 @@ class ProgramaController extends Controller
                           $fileNames3[] = $imageName;
                        }
                        $images3 = json_encode($fileNames3);
+                    }
+                    else
+                    {
+                            $images3 ='["d-buffete-1.png","d-buffete-2.png","d-buffete-3.png"]';
 
-                       // imagenes almuerzo buffete
+                    }
+
+                    if($request->file('imagesdbuffete'))
+                    {
+                        // imagenes almuerzo buffete
                        foreach($request->file('imagesabuffete') as $imag)
                        {
                            $imageName=$imag->getClientOriginalName();
@@ -202,13 +186,68 @@ class ProgramaController extends Controller
 
                         }
                         $images4 = json_encode($fileNames4);
+                    }
+                    else
+                    {
+                        $images4 ='["a-buffete-1.png","a-buffete-2.png","a-buffete-3.png"]';
+                    }
 
-                 }
-                 else
-                 {
-                        $images3 ='0';
-                        $images4 ='1';
-                 }
+                    if($request->file('imagesh'))
+                    {
+                        // imagenes almuerzo buffete
+                       foreach($request->file('imagesh') as $imag)
+                       {
+                           $imageName=$imag->getClientOriginalName();
+                           $imag->move(public_path().'/images/', $imageName);
+                           $cuts = Image::make((public_path('/images/'.$imageName)))->fit(340, 245);
+                           $cuts->save();
+                           $fileNames5[] = $imageName;
+
+                        }
+                        $images5 = json_encode($fileNames5);
+                    }
+                    else
+                    {
+                        $images5 ='["a-buffete-1.png","a-buffete-2.png","a-buffete-3.png"]';
+                    }
+
+                    if($request->file('imagesh2'))
+                    {
+                        // imagenes almuerzo buffete
+                       foreach($request->file('imagesh2') as $imag)
+                       {
+                           $imageName=$imag->getClientOriginalName();
+                           $imag->move(public_path().'/images/', $imageName);
+                           $cuts = Image::make((public_path('/images/'.$imageName)))->fit(340, 245);
+                           $cuts->save();
+                           $fileNames6[] = $imageName;
+
+                        }
+                        $images6 = json_encode($fileNames6);
+                    }
+                    else
+                    {
+                        $images6 ='["a-buffete-1.png","a-buffete-2.png","a-buffete-3.png"]';
+                    }
+
+                    if($request->file('imagesh3'))
+                    {
+                        // imagenes almuerzo buffete
+                       foreach($request->file('imagesh3') as $imag)
+                       {
+                           $imageName=$imag->getClientOriginalName();
+                           $imag->move(public_path().'/images/', $imageName);
+                           $cuts = Image::make((public_path('/images/'.$imageName)))->fit(340, 245);
+                           $cuts->save();
+                           $fileNames7[] = $imageName;
+
+                        }
+                        $images7 = json_encode($fileNames7);
+                    }
+                    else
+                    {
+                        $images7 ='["a-buffete-1.png","a-buffete-2.png","a-buffete-3.png"]';
+                    }
 
 
                 // corta las fotos solo de la portada

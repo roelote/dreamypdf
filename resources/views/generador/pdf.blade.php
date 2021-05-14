@@ -378,12 +378,14 @@ h3
             </div>
             <br>
             <table class="table">
-
+                @php
+                $dbuff = json_decode($id->imagesdbuffete);
+                @endphp
               <tbody>
                 <tr>
-                  <td style="width: 33%"><img src="img/d-buffete-1.png" alt="" style="width: 100%; height:550px;"></td>
-                  <td style="width: 33%"><img src="img/d-buffete-2.png" alt="" style="width: 100%; height:550px;"></td>
-                  <td style="width: 33%"><img src="img/d-buffete-3.png" alt="" style="width: 100%; height:550px;"></td>
+                  <td style="width: 33%"><img src="images/{{ $dbuff[0] }}" alt="" style="width: 100%; height:550px;"></td>
+                  <td style="width: 33%"><img src="images/{{ $dbuff[1] }}" alt="" style="width: 100%; height:550px;"></td>
+                  <td style="width: 33%"><img src="images/{{ $dbuff[2] }}" alt="" style="width: 100%; height:550px;"></td>
                 </tr>
 
               </tbody>
@@ -406,12 +408,14 @@ h3
             </div>
             <br>
             <table class="table">
-
+                @php
+                $abuff = json_decode($id->imagesabuffete);
+                @endphp
               <tbody>
                 <tr>
-                  <td style="width: 33%"><img src="img/a-buffete-1.png" alt="" style="width: 100%; height:550px;"></td>
-                  <td style="width: 33%"><img src="img/a-buffete-2.png" alt="" style="width: 100%; height:550px;"></td>
-                  <td style="width: 33%"><img src="img/a-buffete-3.png" alt="" style="width: 100%; height:550px;"></td>
+                  <td style="width: 33%"><img src="images/{{ $abuff[0] }}" alt="" style="width: 100%; height:550px;"></td>
+                  <td style="width: 33%"><img src="images/{{ $abuff[1] }}" alt="" style="width: 100%; height:550px;"></td>
+                  <td style="width: 33%"><img src="images/{{ $abuff[2] }}" alt="" style="width: 100%; height:550px;"></td>
                 </tr>
 
               </tbody>
