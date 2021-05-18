@@ -34,6 +34,13 @@ Route::get('/programa/{id}/edit', 'ProgramaController@edit')->name('programa.edi
 Route::patch('/programa/{id}', 'ProgramaController@update')->name('programa.update');
 
 //ruta generar pdf
+
+//hoteles de pdf
+Route::get('/hotelpdf', 'HotelpdfController@index')->name('hotelpdf.home');
+Route::get('/hotelpdf/crear', 'hotelpdfController@create')->name('hotelpdf.create');
+Route::post('/hotelpdf', 'hotelpdfController@store')->name('hotelpdf.store');
+
+
 Route::get('/programapdf/{id}', 'ProgramaController@exportPdf')->name('programa.pdf');
 
 Auth::routes();

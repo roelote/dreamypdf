@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Imgtour;
+use App\Hotelpdf;
 use Illuminate\Http\Request;
 
-class ImgtourController extends Controller
+class HotelpdfController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,9 @@ class ImgtourController extends Controller
      */
     public function index()
     {
-        //
+
+        $date = Hotelpdf::all();
+        return view('hotelpdf.index',compact('date'));
     }
 
     /**
@@ -24,7 +26,7 @@ class ImgtourController extends Controller
      */
     public function create()
     {
-        //
+        return view('hotelpdf.create');
     }
 
     /**
@@ -35,16 +37,29 @@ class ImgtourController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datos = $request->validate([
+            'nombre' => 'required',
+            'categoria' =>'required',
+            'descripcion'=>''
+        ]);
+
+        Hotelpdf::create([
+            'nombre' => $datos['nombre'],
+            'categoria'=>$datos['categoria'],
+            'descripcion' => $datos['descripcion']
+        ]);
+
+       return redirect()->route('hotelpdf.home');
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Imgtour  $imgtour
+     * @param  \App\Hotelpdf  $hotelpdf
      * @return \Illuminate\Http\Response
      */
-    public function show(Imgtour $imgtour)
+    public function show(Hotelpdf $hotelpdf)
     {
         //
     }
@@ -52,10 +67,10 @@ class ImgtourController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Imgtour  $imgtour
+     * @param  \App\Hotelpdf  $hotelpdf
      * @return \Illuminate\Http\Response
      */
-    public function edit(Imgtour $imgtour)
+    public function edit(Hotelpdf $hotelpdf)
     {
         //
     }
@@ -64,10 +79,10 @@ class ImgtourController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Imgtour  $imgtour
+     * @param  \App\Hotelpdf  $hotelpdf
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Imgtour $imgtour)
+    public function update(Request $request, Hotelpdf $hotelpdf)
     {
         //
     }
@@ -75,10 +90,10 @@ class ImgtourController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Imgtour  $imgtour
+     * @param  \App\Hotelpdf  $hotelpdf
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Imgtour $imgtour)
+    public function destroy(Hotelpdf $hotelpdf)
     {
         //
     }

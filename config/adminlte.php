@@ -235,18 +235,38 @@ return [
             'can'  => 'manage-blog', //rol
         ],
         [
-            'text'        => 'Generar PDF',
+            'text'        => 'Generar PDFS',
             'route'         => 'programa.home',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 'Generador',
-            'label_color' => 'danger',
+            // 'label'       => 'Generador',
+            // 'label_color' => 'danger',
 
         ],
-        ['header' => 'account_settings'],
+        [
+            'text'        => 'Hoteles PDFS',
+            'route'       => 'hotelpdf.home',
+            'icon'        => 'far fa-fw fa-file',
+            // 'label'       => 'Generador',
+            // 'label_color' => 'danger',
+
+        ],
+
+        ['header' => 'GENERADOR PDF'],
+        [
+            'text' => 'Ver Lista Pdfs',
+            'url'  => 'programa.home',
+            'icon' => 'far fa-fw fa-file',
+        ],
+        [
+            'text' => 'Crear pdf',
+            'url'  => 'programa.create',
+            'icon' => 'far fa-fw fa-file',
+        ],
+
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'far fa-fw fa-file',
         ],
         [
             'text' => 'change_password',
@@ -254,11 +274,11 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'GENERADOR PDF',
+            'text'    => 'Hoteles',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Crear Hotel',
                     'url'  => '#',
                 ],
                 [
