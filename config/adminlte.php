@@ -240,6 +240,7 @@ return [
             'icon'        => 'far fa-fw fa-file',
             'label'       => 'Generador',
             'label_color' => 'danger',
+
         ],
         ['header' => 'account_settings'],
         [
@@ -253,7 +254,7 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
+            'text'    => 'GENERADOR PDF',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [

@@ -70,6 +70,8 @@
 </script>
 <script>
     CKEDITOR.replace('itinerario', options);
+    CKEDITOR.replace('incluye', options);
+    CKEDITOR.replace('precio', options);
 </script>
 
 @stop

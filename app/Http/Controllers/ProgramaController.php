@@ -98,43 +98,6 @@ class ProgramaController extends Controller
                     }
                     $images2 = json_encode($fileNames2);
 
-                    //    // imagenes hotel basico
-                    //    foreach($request->file('imagesh') as $imag)
-                    //    {
-                    //        $imageName=$imag->getClientOriginalName();
-                    //        $imag->move(public_path().'/images/', $imageName);
-                    //        $cuts = Image::make((public_path('/images/'.$imageName)))->fit(340, 245);
-                    //        $cuts->save();
-                    //        $fileNames5[] = $imageName;
-
-                    //    }
-                    //    $images5 = json_encode($fileNames5);
-
-                    //    // imagenes hotel 2*
-                    //    foreach($request->file('imagesh2') as $imag)
-                    //    {
-                    //        $imageName=$imag->getClientOriginalName();
-                    //        $imag->move(public_path().'/images/', $imageName);
-                    //        $cuts = Image::make((public_path('/images/'.$imageName)))->fit(340, 245);
-                    //        $cuts->save();
-                    //        $fileNames6[] = $imageName;
-
-                    //    }
-                    //    $images6 = json_encode($fileNames6);
-
-                    //     // imagenes hotel 3*
-                    //     foreach($request->file('imagesh3') as $imag)
-                    //     {
-                    //         $imageName=$imag->getClientOriginalName();
-                    //         $imag->move(public_path().'/images/', $imageName);
-                    //         $cuts = Image::make((public_path('/images/'.$imageName)))->fit(340, 245);
-                    //         $cuts->save();
-                    //         $fileNames7[] = $imageName;
-
-                    //     }
-                    //     $images7 = json_encode($fileNames7);
-
-
                     //     //aqui separamos la url para poder poner guiones y corregir
                     $filename = pathinfo($url_nombre_img, PATHINFO_FILENAME);
                     $extension = pathinfo($url_nombre_img, PATHINFO_EXTENSION);

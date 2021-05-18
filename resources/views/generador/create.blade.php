@@ -10,7 +10,7 @@
 @section('content')
 
 <div class="card" >
-    <div class="card-header">
+    <div class="card-header ">
         <h1 class="text-center text-uppercase">Generar PDF</h1>
       </div>
     <div class="card-body">
@@ -122,7 +122,6 @@
   };
 </script>
 <script>
-
     CKEDITOR.replace('itinerario', options);
     CKEDITOR.replace('incluye', options);
     CKEDITOR.replace('precio', options);

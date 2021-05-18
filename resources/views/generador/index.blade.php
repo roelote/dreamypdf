@@ -5,7 +5,7 @@
 @section('plugins','Datatables',true)
 
 @section('content_header')
-    <a class="btn btn-primary" href="{{ route('programa.create') }}">Crear PDF</a>
+    <a class="btn btn-primary" href="{{ route('programa.create') }}">Crear Nuevo PDF</a>
 @stop
 
 @section('content')
@@ -15,7 +15,7 @@
         <table id="generator" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">Numero #</th>
                     <th scope="col">Nombre Tour</th>
                     <th scope="col">Fecha Creacion</th>
                     <th scope="col">Fecha Actualizacion</th>

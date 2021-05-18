@@ -14,8 +14,13 @@
                 <div class="card-body p-0 d-flex">
                   <div class="d-flex flex-column m-auto">
                     <div class="text-center">
-                      <span class="text-uppercase">Paquetes</span>
-                      <h6 class="stats-small__value count my-3">0</h6>
+                      <span class="text-uppercase">Porgramas Generados</span>
+                      <h6 class="stats-small__value count my-3">@php
+                          $a = rand(0,10);
+
+                          echo $a;
+
+                      @endphp</h6>
                     </div>
                   </div>
 
