@@ -56,6 +56,7 @@ class ProgramaController extends Controller
             'imagesitinerario' => 'required',
             'incluye' => 'required',
             'imagesincluye'=> 'required',
+            'addmore.*.name' => 'required',
             // 'imagesdbuffete'=> 'required',
             // 'imagesabuffete'=> 'required',
             // 'imagesh'=> 'required',
@@ -155,62 +156,13 @@ class ProgramaController extends Controller
                         $images4 ='["a-buffete-1.png","a-buffete-2.png","a-buffete-3.png"]';
                     }
 
-                    if($request->file('imagesh'))
-                    {
-                        // imagenes almuerzo buffete
-                       foreach($request->file('imagesh') as $imag)
-                       {
-                           $imageName=$imag->getClientOriginalName();
-                           $imag->move(public_path().'/images/', $imageName);
-                           $cuts = Image::make((public_path('/images/'.$imageName)))->fit(340, 245);
-                           $cuts->save();
-                           $fileNames5[] = $imageName;
+                // hoteles
 
-                        }
-                        $images5 = json_encode($fileNames5);
-                    }
-                    else
-                    {
-                        $images5 ='["hotel-1.png","hotel-2.png","hotel-3.png","hotel-4.png","hotel-5.png","hotel-6.png"]';
-                    }
+                    foreach ($request->addmore as $key => $value) {
 
-                    if($request->file('imagesh2'))
-                    {
-                        // imagenes almuerzo buffete
-                       foreach($request->file('imagesh2') as $imag)
-                       {
-                           $imageName=$imag->getClientOriginalName();
-                           $imag->move(public_path().'/images/', $imageName);
-                           $cuts = Image::make((public_path('/images/'.$imageName)))->fit(340, 245);
-                           $cuts->save();
-                           $fileNames6[] = $imageName;
-
-                        }
-                        $images6 = json_encode($fileNames6);
+                        $filehotel = $value;
                     }
-                    else
-                    {
-                        $images6 ='["hotel2-1.png","hotel2-2.png","hotel2-3.png","hotel2-4.png","hotel2-5.png","hotel2-6.png"]';
-                    }
-
-                    if($request->file('imagesh3'))
-                    {
-                        // imagenes almuerzo buffete
-                       foreach($request->file('imagesh3') as $imag)
-                       {
-                           $imageName=$imag->getClientOriginalName();
-                           $imag->move(public_path().'/images/', $imageName);
-                           $cuts = Image::make((public_path('/images/'.$imageName)))->fit(340, 245);
-                           $cuts->save();
-                           $fileNames7[] = $imageName;
-
-                        }
-                        $images7 = json_encode($fileNames7);
-                    }
-                    else
-                    {
-                        $images7 ='["hotel3-1.png","hotel3-2.png","hotel3-3.png","hotel3-4.png","hotel3-5.png","hotel3-6.png"]';
-                    }
+                    $hotelps = json_encode($filehotel);
 
 
                 // corta las fotos solo de la portada
@@ -225,9 +177,7 @@ class ProgramaController extends Controller
                      'imagesincluye'=>$images2,
                      'imagesdbuffete'=> $images3,
                      'imagesabuffete'=> $images4,
-                     'imagesh'=> $images5,
-                     'imagesh2'=> $images6,
-                     'imagesh3'=> $images7,
+                     'hotelp'=> $hotelps, //[{"name":"a"},{"name":"b"},{"name":"c"},{"name":"d"}]
                      'incluye'=> $datos['incluye'],
                      'precio'=> $datos['precio']
                  ]);

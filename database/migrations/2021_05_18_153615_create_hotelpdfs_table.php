@@ -17,6 +17,7 @@ class CreateHotelpdfsTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('categoria');
+            $table->integer('programa_id')->nullable();
             $table->text('descripcion')->nullable();
             $table->timestamps();
         });

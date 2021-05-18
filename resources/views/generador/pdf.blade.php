@@ -276,6 +276,7 @@ h3
                  $incl = json_decode($id->imagesincluye);
                  @endphp
               <tbody>
+
                 <tr>
                   <td><img src="images/{{ $incl[0] }}" alt="" style="width: 506px; height:350px;"></td>
                 </tr>
@@ -437,7 +438,7 @@ h3
               <span class="font2">HOTEL BÁSICO</span>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aliquam soluta deleniti voluptates adipisci vero magni illum at consectetur ipsum praesentium voluptas non dolore vel quaerat, dolores corporis quo similique.</p>
               <div>
-                <table class="table">
+                {{--  <table class="table">
                     @php
                     $h1 = json_decode($id->imagesh);
                     @endphp
@@ -454,7 +455,7 @@ h3
                     </tr>
 
                   </tbody>
-                </table>
+                </table>  --}}
               </div>
 
             </div>
@@ -476,7 +477,7 @@ h3
           <p>Mantenemos una amplia y variada flota de vehículos de diferentes modelos y capacidades, siempre preparados para brindarte la mejor atención, cumpliendo con todos los protocolos de Bioseguridad.</p>
             </div>
             <div>
-              <table class="table">
+              {{--  <table class="table">
                 @php
                 $h2 = json_decode($id->imagesh2);
                 @endphp
@@ -493,7 +494,7 @@ h3
                   </tr>
 
                 </tbody>
-              </table>
+              </table>  --}}
             </div>
 
           <footer>
@@ -512,7 +513,7 @@ h3
           <p>Mantenemos una amp.</p>
             </div>
             <div>
-              <table class="table">
+              {{--  <table class="table">
                 @php
                 $h3 = json_decode($id->imagesh3);
                 @endphp
@@ -529,7 +530,7 @@ h3
                   </tr>
 
                 </tbody>
-              </table>
+              </table>  --}}
             </div>
 
 

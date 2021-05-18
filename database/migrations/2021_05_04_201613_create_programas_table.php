@@ -23,9 +23,7 @@ class CreateProgramasTable extends Migration
             $table->text('imagesincluye');
             $table->text('imagesdbuffete')->nullable();
             $table->text('imagesabuffete')->nullable();
-            $table->text('imagesh')->nullable();
-            $table->text('imagesh2')->nullable();
-            $table->text('imagesh3')->nullable();
+            $table->text('hotelp')->nullable();
             $table->text('precio');
             $table->timestamps();
         });

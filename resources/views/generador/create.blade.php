@@ -72,7 +72,19 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-4">
+                <table class="table table-bordered" id="dynamicTable">
+
+                    <tr>
+                        <th>Nombre Hotel</th>
+                        <th>Accion</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="addmore[0][name]" placeholder="Enter your Name" class="form-control" /></td>
+                        <td><button type="button" name="add" id="add" class="btn btn-success">Agregar Hotel</button></td>
+                    </tr>
+
+                </table>
+                {{--  <div class="form-group col-md-4">
                     <label for="itinerario" class="text-uppercase">Hotel Basico <small class="text-danger font-weight-bold"> 6 FOTOS</small></label>
                     <div class="border p-2 bg-light">
                       <input type="file" name="imagesh[]" multiple class="form-control-file" accept="image/*">
@@ -89,7 +101,7 @@
                     <div class="border p-2 bg-light">
                     <input type="file" name="imagesh3[]" multiple class="form-control-file" accept="image/*">
                     </div>
-                </div>
+                </div>  --}}
             </div>
             <div class="form-group">
                 <label for="precio">PRECIOS</label>
@@ -126,6 +138,24 @@
     CKEDITOR.replace('incluye', options);
     CKEDITOR.replace('precio', options);
 </script>
+
+<script type="text/javascript">
+    var i = 0;
+
+    $("#add").click(function(){
+
+        ++i;
+
+        $("#dynamicTable").append('<tr><td><input type="text" name="addmore['+i+'][name]" placeholder="Enter your Name" class="form-control" /></td><td><button type="button" class="btn btn-danger remove-tr">Borrar</button></td></tr>');
+    });
+
+    $(document).on('click', '.remove-tr', function(){
+
+         $(this).parents('tr').remove();
+
+    });
+</script>
+
 
 @stop
 
