@@ -169,6 +169,14 @@ p, li
    width: 100% !important;
    border: 1px solid #000;
 }
+.precio  table thead  {
+   background-color: #8AD3E0;
+}
+
+.precio table td, .precio thead th
+{
+ padding: .3rem;
+}
 .precio th,.precio td {
    width: 25%;
    text-align: left;
@@ -433,9 +441,8 @@ h3
 
         </header>
             <div>
-              <span class="font text-center">HOTELES QUE OFRECEMOS </span>
-              <span class="font2">HOTEL BÁSICO</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aliquam soluta deleniti voluptates adipisci vero magni illum at consectetur ipsum praesentium voluptas non dolore vel quaerat, dolores corporis quo similique.</p>
+              <span class="font text-center">{{ $id->nombre_hotel1 }} </span>
+              <span class="font2">{{ $id->categoria_h1 }}</span>
               <div>
                 <table class="table">
                     @php
@@ -471,9 +478,8 @@ h3
 
         </header>
             <div>
-              <span class="font text-center">HOTELES QUE OFRECEMOS </span>
-              <span class="font2">HOTEL 2 <img src="img/estrella.png" width="20px"> <img src="img/estrella.png" width="20px"></span>
-          <p>Mantenemos una amplia y variada flota de vehículos de diferentes modelos y capacidades, siempre preparados para brindarte la mejor atención, cumpliendo con todos los protocolos de Bioseguridad.</p>
+                <span class="font text-center">{{ $id->nombre_hotel2 }} </span>
+                <span class="font2">{{ $id->categoria_h2 }}</span>
             </div>
             <div>
               <table class="table">
@@ -501,43 +507,7 @@ h3
 
           </footer>
       </section>
-      <div class="page-break"></div>
-      <section style="margin: 30pt 30pt">
-        <header>
 
-        </header>
-            <div>
-              <span class="font text-center">HOTELES QUE OFRECEMOS </span>
-              <span class="font2">HOTEL 3 <img src="img/estrella.png" width="20px"> <img src="img/estrella.png" width="20px"> <img src="img/estrella.png" width="20px"></span>
-          <p>Mantenemos una amp.</p>
-            </div>
-            <div>
-              <table class="table">
-                @php
-                $h3 = json_decode($id->imagesh3);
-                @endphp
-                <tbody>
-                  <tr>
-                    <td style="width: 33%"><img src="images/{{ $h3[0] }}" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="images/{{ $h3[1] }}" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="images/{{ $h3[2] }}" alt="" style="width: 100%; height:260px;"></td>
-                  </tr>
-                  <tr>
-                    <td style="width: 33%"><img src="images/{{ $h3[3] }}" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="images/{{ $h3[4] }}" alt="" style="width: 100%; height:260px;"></td>
-                    <td style="width: 33%"><img src="images/{{ $h3[5] }}" alt="" style="width: 100%; height:260px;"></td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
-
-
-          <footer>
-            <img src="img/logo.png" width="70px">
-
-          </footer>
-      </section>
       <div class="page-break"></div>
       <section style="margin: 50pt 50pt">
         <header>

@@ -16,6 +16,12 @@ class ProgramaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         $this->middleware('auth');
+     }
+
     public function index()
     {
         $date = Programa::all();
@@ -56,11 +62,10 @@ class ProgramaController extends Controller
             'imagesitinerario' => 'required',
             'incluye' => 'required',
             'imagesincluye'=> 'required',
-            // 'imagesdbuffete'=> 'required',
-            // 'imagesabuffete'=> 'required',
-            // 'imagesh'=> 'required',
-            // 'imagesh2'=> 'required',
-            // 'imagesh3'=> 'required',
+            'nombre_hotel1'=>'required',
+            'nombre_hotel2'=>'required',
+            'categoria_h1'=>'required',
+            'categoria_h2'=>'required',
             'precio' => 'required'
              ]);
 
@@ -193,24 +198,7 @@ class ProgramaController extends Controller
                         $images6 ='["hotel2-1.png","hotel2-2.png","hotel2-3.png","hotel2-4.png","hotel2-5.png","hotel2-6.png"]';
                     }
 
-                    if($request->file('imagesh3'))
-                    {
-                        // imagenes almuerzo buffete
-                       foreach($request->file('imagesh3') as $imag)
-                       {
-                           $imageName=$imag->getClientOriginalName();
-                           $imag->move(public_path().'/images/', $imageName);
-                           $cuts = Image::make((public_path('/images/'.$imageName)))->fit(340, 245);
-                           $cuts->save();
-                           $fileNames7[] = $imageName;
 
-                        }
-                        $images7 = json_encode($fileNames7);
-                    }
-                    else
-                    {
-                        $images7 ='["hotel3-1.png","hotel3-2.png","hotel3-3.png","hotel3-4.png","hotel3-5.png","hotel3-6.png"]';
-                    }
 
 
                 // corta las fotos solo de la portada
@@ -227,7 +215,10 @@ class ProgramaController extends Controller
                      'imagesabuffete'=> $images4,
                      'imagesh'=> $images5,
                      'imagesh2'=> $images6,
-                     'imagesh3'=> $images7,
+                     'nombre_hotel1'=>$datos['nombre_hotel1'],
+                     'nombre_hotel2'=>$datos['nombre_hotel2'],
+                     'categoria_h1'=>$datos['categoria_h1'],
+                     'categoria_h2'=>$datos['categoria_h2'],
                      'incluye'=> $datos['incluye'],
                      'precio'=> $datos['precio']
                  ]);
