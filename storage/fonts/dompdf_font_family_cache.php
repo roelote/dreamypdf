@@ -78,16 +78,16 @@
     'normal' => $rootDir . '/lib/fonts/DejaVuSerif',
   ),
   'sitka small' => array(
-    'normal' => $fontDir . '/sitka_small_normal_ebb423d978587ccf871e5399abb76f48',
+    'normal' => $fontDir . '/sitka_small_normal_94b92ef15abdba9065d0ae620102d3cf',
   ),
   'sitka small bold' => array(
-    'normal' => $fontDir . '/sitka_small_bold_normal_64de8427151ae9f074d102b17367a908',
+    'normal' => $fontDir . '/sitka_small_bold_normal_6aa3f779b93afa457bd207cfa6ae2c90',
   ),
   'robotocondensed-regular' => array(
-    'normal' => $fontDir . '/robotocondensed_regular_normal_1f553eb27cf0935358a5c8b1982bc269',
+    'normal' => $fontDir . '/robotocondensed_regular_normal_43346d09d5dd29a596308d1800798ab4',
   ),
   'oswald-semibold' => array(
-    'normal' => $fontDir . '/oswald_semibold_normal_518cf40375a7a61b6107f66752451a94',
+    'normal' => $fontDir . '/oswald_semibold_normal_526effdca100d786a50f640192939fbb',
   ),
   'fontawesome' => array(
     'normal' => $fontDir . '/fontawesome_normal_a07c54af815ea54af1b5e5aa13cc5f8b',

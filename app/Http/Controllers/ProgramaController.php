@@ -16,6 +16,12 @@ class ProgramaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         $this->middleware('auth');
+     }
+
     public function index()
     {
         $date = Programa::all();
@@ -56,12 +62,19 @@ class ProgramaController extends Controller
             'imagesitinerario' => 'required',
             'incluye' => 'required',
             'imagesincluye'=> 'required',
+<<<<<<< HEAD
             'addmore.*.name' => 'required',
             // 'imagesdbuffete'=> 'required',
             // 'imagesabuffete'=> 'required',
             // 'imagesh'=> 'required',
             // 'imagesh2'=> 'required',
             // 'imagesh3'=> 'required',
+=======
+            'nombre_hotel1'=>'required',
+            'nombre_hotel2'=>'required',
+            'categoria_h1'=>'required',
+            'categoria_h2'=>'required',
+>>>>>>> ddd0239a58dfaf4a50b6ac22a2b844ee79ba0de9
             'precio' => 'required'
              ]);
 
@@ -160,9 +173,21 @@ class ProgramaController extends Controller
 
                     foreach ($request->addmore as $key => $value) {
 
+<<<<<<< HEAD
                         $filehotel = $value;
                     }
                     $hotelps = json_encode($filehotel);
+=======
+                        }
+                        $images6 = json_encode($fileNames6);
+                    }
+                    else
+                    {
+                        $images6 ='["hotel2-1.png","hotel2-2.png","hotel2-3.png","hotel2-4.png","hotel2-5.png","hotel2-6.png"]';
+                    }
+
+
+>>>>>>> ddd0239a58dfaf4a50b6ac22a2b844ee79ba0de9
 
 
                 // corta las fotos solo de la portada
@@ -177,7 +202,16 @@ class ProgramaController extends Controller
                      'imagesincluye'=>$images2,
                      'imagesdbuffete'=> $images3,
                      'imagesabuffete'=> $images4,
+<<<<<<< HEAD
                      'hotelp'=> $hotelps, //[{"name":"a"},{"name":"b"},{"name":"c"},{"name":"d"}]
+=======
+                     'imagesh'=> $images5,
+                     'imagesh2'=> $images6,
+                     'nombre_hotel1'=>$datos['nombre_hotel1'],
+                     'nombre_hotel2'=>$datos['nombre_hotel2'],
+                     'categoria_h1'=>$datos['categoria_h1'],
+                     'categoria_h2'=>$datos['categoria_h2'],
+>>>>>>> ddd0239a58dfaf4a50b6ac22a2b844ee79ba0de9
                      'incluye'=> $datos['incluye'],
                      'precio'=> $datos['precio']
                  ]);

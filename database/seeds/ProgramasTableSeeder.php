@@ -12,6 +12,6 @@ class ProgramasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Programa::class,8)->create();
+        // factory(Programa::class,8)->create();
     }
 }

@@ -34,11 +34,11 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="itinerario">ITINERARIO</label>
+                    <label for="itinerario">TEXTO ITINERARIO</label>
                     <textarea class="form-control mb-2" id="itinerario" name="itinerario" cols="30" rows="10"></textarea>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="incluye">INCLUYES</label>
+                    <label for="incluye">TEXTO INCLUYE - NO INCLUYE</label>
                     <textarea class="form-control mb-2" id="incluye" name="incluye" cols="30" rows="10"></textarea>
                 </div>
             </div>
@@ -72,6 +72,7 @@
                 </div>
             </div>
             <div class="form-row">
+<<<<<<< HEAD
                 <table class="table table-bordered" id="dynamic_field">
 
                     <tr>
@@ -87,18 +88,55 @@
                     <label for="itinerario" class="text-uppercase">Hotel Basico <small class="text-danger font-weight-bold"> 6 FOTOS</small></label>
                     <div class="border p-2 bg-light">
                       <input type="file" name="imagesh[]" multiple class="form-control-file" accept="image/*">
+=======
+                <div class="form-group col-md-4">
+                    <label for="itinerario" class="text-uppercase">Nombre Hotel</label>
+                    <div class="">
+                        <input type="text" class="form-control mb-2" id="nombre_hotel1" name="nombre_hotel1" placeholder="Nombre Hotel" required>
+>>>>>>> ddd0239a58dfaf4a50b6ac22a2b844ee79ba0de9
                     </div>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="incluye" class="text-uppercase">Hotel 2 estrellas <small class="text-danger font-weight-bold"> 6 FOTOS</small></label>
+                    <label for="incluye" class="text-uppercase">Categoria Hotel</label>
+                    <select class="form-control" name="categoria_h1" id="categoria_h1">
+                        <option value="HOTEL BASICO">HOTEL BASICO</option>
+                        <option value="HOTEL 2 ESTRELLAS">HOTEL 2 ESTRELLAS</option>
+                        <option value="Hotel 3 ESTRELLAS">Hotel 3 ESTRELLAS</option>
+                        <option value="Hotel 4 ESTRELLAS">Hotel 4 ESTRELLAS</option>
+                        <option value="Hotel 5 ESTRELLAS">Hotel 5 ESTRELLAS</option>
+                      </select>
+                    {{-- <div class="">
+                        <input type="text" class="form-control mb-2" id="categoria_h1" name="categoria_h1" placeholder="Categoria Hotel" required>
+                    </div> --}}
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="incluye" class="text-uppercase">Fotos Hotel <small class="text-danger font-weight-bold"> 6 FOTOS</small></label>
+                    <div class="border p-2 bg-light">
+                    <input type="file" name="imagesh[]" multiple class="form-control-file" accept="image/*">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="itinerario" class="text-uppercase">NOMBRE HOTEL</label>
+                    <div class="">
+                        <input type="text" class="form-control mb-2" id="nombre_hotel2" name="nombre_hotel2" placeholder="Categoria Hotel" required>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="incluye" class="text-uppercase">Categoria Hotel</label>
+                    <select class="form-control" name="categoria_h2" id="categoria_h2">
+                        <option value="HOTEL BASICO">HOTEL BASICO</option>
+                        <option value="HOTEL 2 ESTRELLAS">HOTEL 2 ESTRELLAS</option>
+                        <option value="Hotel 3 ESTRELLAS">Hotel 3 ESTRELLAS</option>
+                        <option value="Hotel 4 ESTRELLAS">Hotel 4 ESTRELLAS</option>
+                        <option value="Hotel 5 ESTRELLAS">Hotel 5 ESTRELLAS</option>
+                      </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="incluye" class="text-uppercase">Fotos Hotel <small class="text-danger font-weight-bold"> 6 FOTOS</small></label>
                     <div class="border p-2 bg-light">
                     <input type="file" name="imagesh2[]" multiple class="form-control-file" accept="image/*">
-                    </div>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="incluye" class="text-uppercase">Hotel 3 estrellas <small class="text-danger font-weight-bold"> 6 FOTOS</small></label>
-                    <div class="border p-2 bg-light">
-                    <input type="file" name="imagesh3[]" multiple class="form-control-file" accept="image/*">
                     </div>
                 </div>  --}}
             </div>
